@@ -1,0 +1,43 @@
+
+**** Build of configuration Debug for project test1 ****
+
+/home/dell/ti/ccs9/ccs/utils/bin/gmake -k -j 8 all -O 
+ 
+Building file: "../test1.cfg"
+Invoking: XDCtools
+"/home/dell/ti/ccs9/xdctools_3_55_00_11_core/xs" --xdcpath="/home/dell/ti/tirtos_tivac_2_16_01_14/packages;/home/dell/ti/tirtos_tivac_2_16_01_14/products/tidrivers_tivac_2_16_01_13/packages;/home/dell/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages;/home/dell/ti/tirtos_tivac_2_16_01_14/products/ndk_2_25_00_09/packages;/home/dell/ti/tirtos_tivac_2_16_01_14/products/uia_2_00_05_50/packages;/home/dell/ti/tirtos_tivac_2_16_01_14/products/ns_1_11_00_10/packages;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.M4F -p ti.platforms.tiva:TM4C123GH6PM -r release -c "/home/dell/ti/ccs9/ccs/tools/compiler/ti-cgt-arm_18.12.2.LTS" "../test1.cfg"
+making package.mak (because of package.bld) ...
+generating interfaces for package configPkg (because package/package.xdc.inc is older than package.xdc) ...
+configuring test1.xem4f from package/cfg/test1_pem4f.cfg ...
+clem4f package/cfg/test1_pem4f.c ...
+Finished building: "../test1.cfg"
+ 
+Building target: "test1.out"
+Invoking: ARM Linker
+"/home/dell/ti/ccs9/ccs/tools/compiler/ti-cgt-arm_18.12.2.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"test1.map" --heap_size=0 --stack_size=512 -i"/home/dell/ti/ccs9/ccs/tools/compiler/ti-cgt-arm_18.12.2.LTS/lib" -i"/home/dell/ti/ccs9/ccs/tools/compiler/ti-cgt-arm_18.12.2.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="test1_linkInfo.xml" --rom_model -o "test1.out" -l"configPkg/linker.cmd" -llibc.a 
+<Linking>
+warning #10247-D: creating output section ".const" without a SECTIONS specification
+warning #10247-D: creating output section ".data" without a SECTIONS specification
+warning #10247-D: creating output section ".text" without a SECTIONS specification
+warning #10247-D: creating output section ".sysmem" without a SECTIONS specification
+warning #10247-D: creating output section ".bss" without a SECTIONS specification
+warning #10247-D: creating output section ".bss:.common" without a SECTIONS specification
+warning #10247-D: creating output section ".cinit" without a SECTIONS specification
+"configPkg/linker.cmd", line 95: warning #10096-D: specified address lies outside memory map
+error #10264: DEFAULT memory range overlaps existing memory range RAM
+ 
+ undefined first referenced                                                                                               
+  symbol       in file                                                                                                    
+ --------- ----------------                                                                                               
+ main      /home/dell/ti/ccs9/ccs/tools/compiler/ti-cgt-arm_18.12.2.LTS/lib/rtsv7M4_T_le_v4SPD16_eabi.lib<args_main.c.obj>
+ 
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "test1.out" not built
+ 
+>> Compilation failure
+makefile:137: recipe for target 'test1.out' failed
+gmake[1]: *** [test1.out] Error 1
+gmake: *** [all] Error 2
+makefile:133: recipe for target 'all' failed
+
+**** Build Finished ****

@@ -1,0 +1,7 @@
+#Fri, 07 Jun 2019 11:34:25 +0530
+#Ant properties
+#Fri Jun 07 11:34:25 IST 2019
+p.Version=1.0.0
+
+dvt.activity.name=System Analyzer/Duration Analysis
+dvt.factory.activity=${dvt.basepath}common/analysis/usecases/dvt/SA_Benchmarking.control.xml

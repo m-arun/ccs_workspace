@@ -1,0 +1,24 @@
+
+**** Build of configuration Debug for project proj1 ****
+
+/home/dell/ti/ccs9/ccs/utils/bin/gmake -k -j 8 all -O 
+ 
+making ../src/sysbios/sysbios.aem4f ...
+Building file: "../empty.cfg"
+Invoking: XDCtools
+"/home/dell/ti/ccs9/xdctools_3_55_00_11_core/xs" --xdcpath="/home/dell/ti/tirtos_tivac_2_16_01_14/packages;/home/dell/ti/tirtos_tivac_2_16_01_14/products/tidrivers_tivac_2_16_01_13/packages;/home/dell/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages;/home/dell/ti/tirtos_tivac_2_16_01_14/products/ndk_2_25_00_09/packages;/home/dell/ti/tirtos_tivac_2_16_01_14/products/uia_2_00_05_50/packages;/home/dell/ti/tirtos_tivac_2_16_01_14/products/ns_1_11_00_10/packages;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.M4F -p ti.platforms.tiva:TM4C123GH6PM -r release -c "/home/dell/ti/ccs9/ccs/tools/compiler/ti-cgt-arm_18.12.2.LTS" --compileOptions "-mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path=\"/home/dell/Documents/work/ccs_workspace/proj1\" --include_path=\"/home/dell/Documents/work/ccs_workspace/proj1\" --include_path=\"/home/dell/ti/tirtos_tivac_2_16_01_14/products/TivaWare_C_Series-2.1.1.71b\" --include_path=\"/home/dell/ti/tirtos_tivac_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/posix\" --include_path=\"/home/dell/ti/ccs9/ccs/tools/compiler/ti-cgt-arm_18.12.2.LTS/include\" --define=ccs=\"ccs\" --define=PART_TM4C123GH6PM --define=ccs --define=TIVAWARE -g --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi  " "../empty.cfg"
+gmake[1]: Nothing to be done for 'all'.
+configuring empty.xem4f from package/cfg/empty_pem4f.cfg ...
+subdir_rules.mk:17: recipe for target 'build-1916616449-inproc' failed
+error: xdc.cfg.Program: "/home/dell/ti/ccs9/xdctools_3_55_00_11_core/packages/xdc/cfg/Program.xs", line 71: xdc.cfg.Program : The package 'ti.sysbios.knl' is not compatible with XDCtools used in this build. Please either use XDCtools compatible with that package, or update the product containing that package, or rebuild the package with XDCtools 3.50 or later.
+js: "/home/dell/ti/ccs9/xdctools_3_55_00_11_core/packages/xdc/cfg/Main.xs", line 160: Error: Configuration failed!
+gmake: *** [package.mak:201: package/cfg/empty_pem4f.xdl] Error 1
+gmake: *** [package/cfg/empty_pem4f.xdl] Deleting file 'package/cfg/empty_pem4f.h'
+gmake: *** [package/cfg/empty_pem4f.xdl] Deleting file 'package/cfg/empty_pem4f.c'
+js: "/home/dell/ti/ccs9/xdctools_3_55_00_11_core/packages/xdc/tools/Cmdr.xs", line 52: Error: xdc.tools.configuro: configuration failed due to earlier errors (status = 2); 'linker.cmd' deleted.
+gmake[1]: *** [build-1916616449-inproc] Error 1
+gmake: *** [build-1916616449] Error 2
+subdir_rules.mk:14: recipe for target 'build-1916616449' failed
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
